@@ -29,7 +29,7 @@ sample_prompt = "A cinematic shot of a baby racoon wearing an intricate italian 
 #CONSTANTS for (vllm) text generation api
 MAX_TOKENS = 256
 VLLM_Model = 'meta-llama/Llama-2-7b-chat-hf'
-sample_vllm_prompt = "Happy New Year BentoML team, Wishing you "
+sample_vllm_prompt = "Generate a Happy New Year Card to the BentoML team: Answer: "
 PROMPT_TEMPLATE = """<s>[INST] <<SYS>>
 You are a helpful, respectful and honest assistant for creating videos. Always answer as helpfully as possible, while being safe. Your answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content. Please ensure that your responses are socially unbiased and positive in nature.
 
@@ -40,9 +40,6 @@ If a question does not make any sense, or is not factually coherent, explain why
 
 
 @bentoml.service(
-    traffic={
-        "timeout": 300,
-    },
     resources={
         "gpu": 1,
         "gpu_type": "nvidia-l4",
@@ -52,17 +49,13 @@ If a question does not make any sense, or is not factually coherent, explain why
 class VLLM:
 
     @bentoml.api
-    def __init__(self) -> None:
-        from vllm import LLM, SamplingParams
-        self.sampling_params = SamplingParams(temperature=0.8, top_p=0.95,max_token=MAX_TOKENS)
-        self.llm = LLM(model=VLLM_Model)
-
     def generate(
         self,
         prompt: str = sample_vllm_prompt,
     ) -> str:
-
-        outputs = self.llm.generate([prompt], self.sampling_params)
+        from vllm import LLM, SamplingParams
+        llm = LLM(model=VLLM_Model)
+        outputs = llm.generate([prompt], SamplingParams(temperature=0.8, top_p=0.95))
         # Print the outputs.
         generation = ""
         for output in outputs:
@@ -74,7 +67,7 @@ class VLLM:
 
 @bentoml.service(
     resources={
-        "gpu": 2,
+        "gpu": 1,
         "gpu_type": "nvidia-l4",
         "memory": "8Gi",
     },
@@ -167,8 +160,7 @@ class Text2Video:
             lang: str = sample_input_data["language"],
     )  -> t.Annotated[Path, bentoml.validators.ContentType("video/*")]:
         #Generate Text Script
-        generatedText = self.vllm_service.generate(prompt=text)
-        script = text + generatedText
+        script = self.vllm_service.generate(prompt=text)
         #Generate Image
         image = self.sdxl_service.txt2img(prompt=text, num_inference_steps = 1,guidance_scale=0)
         imageFilename  = "outputImage.jpg"
