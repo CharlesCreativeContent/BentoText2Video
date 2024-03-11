@@ -1,0 +1,16 @@
+name: "greeting-card"
+service: "service:Text2Video"
+labels:
+  owner: bentoml-team
+  project: gallery
+include:
+  - "*.py"
+  - "female.wav"
+python:
+  requirements_txt: "./requirements.txt"
+  lock_packages: False
+envs:
+  - name: "COQUI_TOS_AGREED"
+    value: 1
+  - name: "HF_TOKEN"
+    value: "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"
