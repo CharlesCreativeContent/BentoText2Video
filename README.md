@@ -1,7 +1,7 @@
 ## Text-2-Video Generation: <a target="_blank" href="https://www.canva.com/design/DAF_O6pGDy8/9sxeLm9LmnVvzbPtdgCspg/view?utm_content=DAF_O6pGDy8&utm_campaign=designshare&utm_medium=link&utm_source=editor#14">Slides Here</a>
 This project demonstrates how to build a text-to-video application using  [BentoML](https://github.com/bentoml/BentoML), powered by [XTTS](https://huggingface.co/coqui/XTTS-v2), [VLLM](https://github.com/bentoml/BentoML), [SDXL-TURBO](https://huggingface.co/coqui/XTTS-v2).
 
-<img src="https://github.com/CharlesCreativeContent/myImages/blob/main/images/Order.jpg?raw=true" width="100%" alt="Portfolio"/>
+<img src="https://github.com/CharlesCreativeContent/myImages/blob/main/images/Order.jpg?raw=true" width="100%" alt="Slideshow Picture"/>
 
 
 I used BentoML demos, including [BentoVLLM](https://github.com/bentoml/BentoVLLM), [BentoXTTS](https://github.com/bentoml/BentoXTTS), and [BentoSDXLTurbo](https://github.com/bentoml/BentoSDXLTurbo), and used MoviePy to edit them into a video.
@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Run the BentoML Service
 
-We have defined a BentoML Service in `service.py`. Run `bentoml serve` in your project directory to start the Service. You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS.
+We Currently have the lock pyWe have defined a BentoML Service in `service.py`. Run `bentoml serve` in your project directory to start the Service. You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS.
 
 ```python
 $ COQUI_TOS_AGREED=1 bentoml serve .
@@ -47,20 +47,6 @@ curl -X 'POST' \
   "text": "It took me quite a long time to develop a voice and now that I have it I am not going to be silent.",
   "lang": "en"
 }' -o output.wav
-```
-
-BentoML client
-
-This client returns the video file as a `Path` object. You can use it to access or process the file. See [Clients](https://docs.bentoml.com/en/latest/guides/clients.html) for details.
-
-```python
-import bentoml
-
-with bentoml.SyncHTTPClient("http://localhost:3000") as client:
-        result = client.text2video(
-            text="It took me quite a long time to develop a voice and now that I have it I am not going to be silent.",
-            lang="en"
-        )
 ```
 
 ## Deploy to production
