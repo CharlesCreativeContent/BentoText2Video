@@ -1,4 +1,4 @@
-This project demonstrates how to build a text-to-speech application using BentoML, powered by [XTTS](https://huggingface.co/coqui/XTTS-v2).
+This project demonstrates how to build a text-to-video application using BentoML, powered by [XTTS](https://huggingface.co/coqui/XTTS-v2).
 
 ## Prerequisites
 
@@ -9,8 +9,8 @@ This project demonstrates how to build a text-to-speech application using BentoM
 ## Install dependencies
 
 ```bash
-git clone https://github.com/bentoml/BentoXTTS.git
-cd BentoXTTS
+git clone https://github.com/CharlesCreativeContent/BentoText2Video.git
+cd BentoText2Video
 pip install -r requirements.txt
 ```
 
