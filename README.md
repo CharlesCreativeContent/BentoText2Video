@@ -1,9 +1,11 @@
+## Text-2-Video Generation: 
+## <a target="_blank" href="https://www.shawncharles.com">Output Video</a> & <a target="_blank" href="https://www.shawncharles.com">Slides</a>
 This project demonstrates how to build a text-to-video application using  [BentoML](https://github.com/bentoml/BentoML), powered by [XTTS](https://huggingface.co/coqui/XTTS-v2), [VLLM](https://github.com/bentoml/BentoML), [SDXL-TURBO](https://huggingface.co/coqui/XTTS-v2).
 
 <img src="https://github.com/CharlesCreativeContent/myImages/blob/main/images/Order.jpg?raw=true" width="100%" alt="Portfolio"/>
 
 
-I used BentoML demos, including [BentoVLLM](https://github.com/bentoml/BentoVLLM), [BentoXTTS](https://github.com/bentoml/BentoXTTS), and [BentoSDXLTurbo](https://github.com/bentoml/BentoSDXLTurbo)
+I used BentoML demos, including [BentoVLLM](https://github.com/bentoml/BentoVLLM), [BentoXTTS](https://github.com/bentoml/BentoXTTS), and [BentoSDXLTurbo](https://github.com/bentoml/BentoSDXLTurbo), and used MoviePy to edit them into a video.
 
 ## Prerequisites
 
