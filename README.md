@@ -1,4 +1,7 @@
-This project demonstrates how to build a text-to-video application using BentoML, powered by [XTTS](https://huggingface.co/coqui/XTTS-v2).
+This project demonstrates how to build a text-to-video application using  [BentoML](https://github.com/bentoml/BentoML), powered by [XTTS](https://huggingface.co/coqui/XTTS-v2), [VLLM](https://github.com/bentoml/BentoML), [SDXL-TURBO](https://huggingface.co/coqui/XTTS-v2).
+
+
+I used BentoML demos, including [BentoVLLM](https://github.com/bentoml/BentoVLLM), [BentoXTTS](https://github.com/bentoml/BentoXTTS), and [BentoSDXLTurbo](https://github.com/bentoml/BentoSDXLTurbo)
 
 ## Prerequisites
 
@@ -45,13 +48,13 @@ curl -X 'POST' \
 
 BentoML client
 
-This client returns the audio file as a `Path` object. You can use it to access or process the file. See [Clients](https://docs.bentoml.com/en/latest/guides/clients.html) for details.
+This client returns the video file as a `Path` object. You can use it to access or process the file. See [Clients](https://docs.bentoml.com/en/latest/guides/clients.html) for details.
 
 ```python
 import bentoml
 
 with bentoml.SyncHTTPClient("http://localhost:3000") as client:
-        result = client.synthesize(
+        result = client.text2video(
             text="It took me quite a long time to develop a voice and now that I have it I am not going to be silent.",
             lang="en"
         )
