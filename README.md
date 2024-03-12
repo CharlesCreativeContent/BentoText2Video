@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Run the BentoML Service
 
-We Currently have the lock pyWe have defined a BentoML Service in `service.py`. Run `bentoml serve` in your project directory to start the Service. You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS.
+We have defined a BentoML Service in `service.py`. Run `bentoml serve` in your project directory to start the Service. You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS. We Currently have the lock_packages set to False in the bentofile.yaml, which bypasses the requirement of local builds. 
 
 ```python
 $ COQUI_TOS_AGREED=1 bentoml serve .
