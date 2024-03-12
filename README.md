@@ -46,7 +46,7 @@ curl -X 'POST' \
   -d '{
   "text": "It took me quite a long time to develop a voice and now that I have it I am not going to be silent.",
   "lang": "en"
-}' -o output.wav
+}' -o output.mp4
 ```
 
 ## Deploy to production
