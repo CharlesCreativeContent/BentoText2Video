@@ -28,7 +28,7 @@ Run `bentoml serve` in your project directory to start the Service.
 
 You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS.
 
-We Currently have the lock_packages set to False in the bentofile.yaml, which bypasses the requirement of local builds. 
+We Currently have the lock_packages set to _False_ in the bentofile.yaml, which bypasses the requirement of local builds. 
 
 ```python
 $ COQUI_TOS_AGREED=1 bentoml serve .
@@ -61,9 +61,7 @@ curl -X 'POST' \
 
 After the Service is ready, you can deploy the application to BentoCloud for better management and scalability.
 
-A YAML configuration file (`bentofile.yaml`) is used to define the build options and package your application into a Bento.
-
-See [Bento build options](https://docs.bentoml.com/en/latest/concepts/bento.html#bento-build-options) to learn more.
+A YAML configuration file (`bentofile.yaml`) is used to define the build options and package your application into a Bento. See [Bento build options](https://docs.bentoml.com/en/latest/concepts/bento.html#bento-build-options) to learn more.
 
 Make sure you have [logged in to BentoCloud](https://docs.bentoml.com/en/latest/bentocloud/how-tos/manage-access-token.html), then run the following command in your project directory to deploy the application to BentoCloud.
 
