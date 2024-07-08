@@ -23,8 +23,11 @@ pip install -r requirements.txt
 ## Run the BentoML Service
 
 We have defined a BentoML Service in `service.py`.
+
 Run `bentoml serve` in your project directory to start the Service.
+
 You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS.
+
 We Currently have the lock_packages set to False in the bentofile.yaml, which bypasses the requirement of local builds. 
 
 ```python
@@ -38,6 +41,7 @@ $ COQUI_TOS_AGREED=1 bentoml serve .
 ```
 
 The server is now active at [http://localhost:3000](http://localhost:3000/).
+
 You can interact with it using the Swagger UI or in other different ways.
 
 CURL
@@ -56,7 +60,9 @@ curl -X 'POST' \
 ## Deploy to production
 
 After the Service is ready, you can deploy the application to BentoCloud for better management and scalability.
+
 A YAML configuration file (`bentofile.yaml`) is used to define the build options and package your application into a Bento.
+
 See [Bento build options](https://docs.bentoml.com/en/latest/concepts/bento.html#bento-build-options) to learn more.
 
 Make sure you have [logged in to BentoCloud](https://docs.bentoml.com/en/latest/bentocloud/how-tos/manage-access-token.html), then run the following command in your project directory to deploy the application to BentoCloud.
