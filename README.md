@@ -42,7 +42,7 @@ $ COQUI_TOS_AGREED=1 bentoml serve .
 
 The server is now active at [http://localhost:3000](http://localhost:3000/).
 
-You can interact with it using the Swagger UI or in other different ways.
+You can interact with it using the Swagger UI, curl, etc.
 
 CURL
 
@@ -69,6 +69,6 @@ Make sure you have [logged in to BentoCloud](https://docs.bentoml.com/en/latest/
 bentoml deploy .
 ```
 
-Once the application is running on BentoCloud, you can access it via the exposed URL.
+Once the application is running on BentoCloud, you can access it with the exposed URL.
 
 **Note**: You can also use BentoML to generate a [Docker image](https://docs.bentoml.com/en/latest/guides/containerization.html) for custom deployments.
