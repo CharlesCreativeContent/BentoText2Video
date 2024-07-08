@@ -28,7 +28,7 @@ Run `bentoml serve` in your project directory to start the Service.
 
 You may also set the environment variable `COQUI_TTS_AGREED=1` to agree to the terms of Coqui TTS.
 
-Lock_packages are currently set to _False_ in the bentofile.yaml, which bypasses mandatory local builds. 
+Lock_packages are currently set to _False_ in the bentofile.yaml, which bypasses local builds. 
 
 ```python
 $ COQUI_TOS_AGREED=1 bentoml serve .
