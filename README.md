@@ -22,7 +22,7 @@ pip install -r requirements.txt
 
 ## Run the BentoML Service
 
-We have defined a BentoML Service in `service.py`.
+BentoML Service is defined in `service.py`.
 
 Run `bentoml serve` in your project directory to start the Service.
 
