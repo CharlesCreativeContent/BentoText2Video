@@ -72,3 +72,33 @@ bentoml deploy .
 Once the application is running on BentoCloud, you can access it with the exposed URL.
 
 **Note**: You can also use BentoML to generate a [Docker image](https://docs.bentoml.com/en/latest/guides/containerization.html) for custom deployments.
+
+
+## More Projects
+
+<table bordercolor="#66b2b2">
+  
+  <tr>
+    <td width="33.3%"  style="align:center;" valign="top">
+<a target="_blank" href="https://github.com/CharlesCreativeContent/runware-pokemon-generator">Runware Pokémon Generator</a>
+        <br />
+      <a target="_blank" href="https://github.com/CharlesCreativeContent/runware-pokemon-generator">
+            <img src="https://github.com/CharlesCreativeContent/runware-pokemon-generator/raw/main/public/runware.gif?raw=true" width="100%"  alt="Runware Pokémon Generator"/>
+        </a>
+    </td>
+    <td width="33.3%" valign="top">
+<a target="_blank" href="https://github.com/CharlesCreativeContent/CoinGecko-Thesys-MCP">CoinGecko-Thesys-MCP</a>
+      <br />
+        <a target="_blank" href="https://github.com/CharlesCreativeContent/CoinGecko-Thesys-MCP">
+          <img src="https://camo.githubusercontent.com/0dd2f60eb61954fb96f89c3c31fe17bdd70d5eede3adf617adca4db22e937638/68747470733a2f2f736861776e696d616765732e6e65746c6966792e6170702f696d616765732f436f696e4765636b6f2e676966" width="100%" alt="CoinGecko-Thesys-MCP"/>
+        </a>
+    </td>
+    <td width="33.3%" valign="top">
+<a target="_blank" href="https://github.com/CharlesCreativeContent/Demo-Day">Travel Web-Application</a>
+        <br />
+        <a target="_blank" href="https://github.com/CharlesCreativeContent/Demo-Day">
+          <img src="https://github.com/CharlesCreativeContent/CharlesCreativeContent/raw/main/images/gif1.gif?raw=true" width="100%" alt="Portfolio"/>
+        </a>
+    </td>
+  </tr>
+</table>
